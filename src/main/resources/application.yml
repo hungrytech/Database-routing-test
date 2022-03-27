@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    replication:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: admin
+      password: sfd845925
+      write:
+        name: write
+        url: jdbc:mysql://{라이터 DB 엔드포인트}
+      reads:
+        - name: read1
+          url: jdbc:mysql://{리더 DB 엔드포인트}
